@@ -37,7 +37,6 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         WriteToMemory(0x00799A82, jumpHookInitializer, sizeof(jumpHookInitializer) / sizeof(*jumpHookInitializer));
         WriteToMemory(0x00417FB1, jumpHook, sizeof(jumpHook) / sizeof(*jumpHook));
         WriteToMemory(0x01B4503A, newBytes, sizeof(newBytes) / sizeof(*newBytes));
-        FreeLibraryAndExitThread((HMODULE)hModule, 0);
         break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
